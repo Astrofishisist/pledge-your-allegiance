@@ -102,7 +102,15 @@
       margin: 0 28px;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
     }
-
+    
+    .line-divider {
+      width: 100%;
+      height: 1px;
+      margin: 32px 0;
+      background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+      opacity: 0.7;
+    }
+    
     .intro {
       text-align: center;
       font-size: clamp(1.15rem, 2.6vw, 1.8rem);
@@ -115,7 +123,7 @@
       margin: 44px 0 34px;
       text-align: center;
       font-style: bold;
-      
+      font-family: "Copperplate Gothic", "Times New Roman", serif;
       font-size: clamp(1.3rem, 2.8vw, 1.9rem);
       letter-spacing: .05em;
     }
@@ -291,11 +299,11 @@
       <p class="invitation">
         Do you have what it takes to be a Traitor and murder your new friends? 
       </p>
-
+      <div class="line-divider" aria-hidden="true"></div>
       <p class="invitation">
         Will you bring forth vengeance upon the Traitors as a Faithful?
       </p>
-
+      <div class="line-divider" aria-hidden="true"></div>
       <p class="invitation">
         Tell us your preferred allegiance and why you believe you are worthy, and my devious co-host and I ...might... consider your request.
       </p>
