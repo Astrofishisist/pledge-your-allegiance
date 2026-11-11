@@ -310,17 +310,17 @@
     </section>
 
     <section class="form-wrap" aria-label="Submit your allegiance">
-      <!-- Replace YOUR_EMAIL_ADDRESS with the inbox that should receive applications. -->
       <form action="https://formsubmit.co/el/bofosa" method="POST">
-        <input type="hidden" name="_next" value="exitpage.html">
+        <input type="hidden" name="_next" value="https://astrofishisist.github.io/pledge-your-allegiance/exitpage.html">
         <input type="hidden" name="_subject" value="The Traitors 2026 — Cardiff CircleUp application">
         <input type="hidden" name="_template" value="table">
-
+        <input type="hidden" name="_captcha" value="false">
+    
         <div class="form-trap" aria-hidden="true">
           <label for="website">Leave this field empty</label>
           <input id="website" type="text" name="_honey" tabindex="-1" autocomplete="off">
         </div>
-
+    
         <div class="field">
           <label for="name">Your name</label>
           <input
@@ -332,7 +332,7 @@
             required
           >
         </div>
-
+    
         <div class="field">
           <label for="allegiance">Your allegiance</label>
           <select id="allegiance" name="allegiance" required>
@@ -341,7 +341,7 @@
             <option value="Traitor">Traitor</option>
           </select>
         </div>
-
+    
         <div class="field">
           <label for="statement">Why are you worthy?</label>
           <textarea
@@ -351,7 +351,7 @@
             required
           ></textarea>
         </div>
-
+    
         <button type="submit">Submit your preferred allegiance</button>
       </form>
     </section>
