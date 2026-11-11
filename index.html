@@ -23,7 +23,7 @@
       min-height: 100vh;
       color: var(--gold);
       background: var(--bg);
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: "Copperplate Gothic Light", "Copperplate Gothic", Copperplate, Georgia, serif;
     }
 
     .page {
@@ -63,17 +63,17 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(3.1rem, 8vw, 5.25rem);
+      font-size: clamp(2.8rem, 7vw, 4.8rem);
       line-height: 1.05;
       font-weight: 700;
-      letter-spacing: .015em;
+      letter-spacing: .03em;
       color: #d9b33b;
     }
 
     .subtitle {
-      margin: 12px 0 0;
-      font: 500 clamp(1rem, 2.8vw, 1.75rem)/1.3 Arial, sans-serif;
-      letter-spacing: .24em;
+      margin: 14px 0 0;
+      font-size: clamp(0.95rem, 2.4vw, 1.5rem);
+      letter-spacing: .28em;
       text-transform: uppercase;
     }
 
@@ -98,49 +98,25 @@
       background: linear-gradient(90deg, var(--gold), transparent);
     }
 
-    .sword {
-      position: relative;
-      width: 34px;
-      height: 100%;
+    .sword-graphic {
       margin: 0 28px;
-    }
-
-    .sword::before {
-      content: "";
-      position: absolute;
-      top: 8px;
-      left: 15px;
-      width: 5px;
-      height: 72px;
-      background: linear-gradient(90deg, #a77b16, #f0ce52 50%, #9b7015);
-      clip-path: polygon(0 0, 100% 0, 75% 82%, 50% 100%, 25% 82%);
-    }
-
-    .sword::after {
-      content: "";
-      position: absolute;
-      top: 28px;
-      left: 0;
-      width: 34px;
-      height: 7px;
-      border-radius: 2px;
-      background: var(--gold);
-      box-shadow: 0 -20px 0 -1px var(--gold);
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
     }
 
     .intro {
       text-align: center;
       font-style: italic;
-      font-size: clamp(1.25rem, 3vw, 2rem);
+      font-size: clamp(1.15rem, 2.6vw, 1.8rem);
       line-height: 1.55;
       margin: 0 auto;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     .event-name {
       margin: 44px 0 34px;
       text-align: center;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      font-weight: bold;
+      font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+      letter-spacing: .05em;
     }
 
     .invitation {
@@ -148,14 +124,14 @@
       margin: 0 auto;
       text-align: center;
       font-style: italic;
-      font-size: clamp(1.25rem, 3vw, 2rem);
+      font-size: clamp(1.15rem, 2.6vw, 1.8rem);
       line-height: 1.45;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     .form-wrap {
       max-width: 840px;
       margin: 76px auto 0;
-      font-family: Arial, Helvetica, sans-serif;
     }
 
     .field { margin-bottom: 28px; }
@@ -163,13 +139,14 @@
     label {
       display: block;
       margin: 0 0 12px;
-      font-size: 1.05rem;
-      letter-spacing: .06em;
+      font-size: 1rem;
+      letter-spacing: .12em;
       text-transform: uppercase;
       color: #d4ad3e;
     }
 
-    input[type="email"],
+    input[type="text"],
+    select,
     textarea {
       display: block;
       width: 100%;
@@ -178,25 +155,45 @@
       background: var(--ink);
       color: #f1d36d;
       padding: 19px 20px;
-      font: 1.1rem Arial, Helvetica, sans-serif;
+      font: 1rem "Copperplate Gothic Light", "Copperplate Gothic", Copperplate, Arial, sans-serif;
       outline: none;
       transition: border-color .15s ease, box-shadow .15s ease;
     }
 
-    input[type="email"] { min-height: 62px; }
+    input[type="text"], select { min-height: 62px; }
+
+    select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d5ad32' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 20px center;
+      background-size: 18px;
+      padding-right: 50px;
+    }
+
+    select option {
+      background: var(--ink);
+      color: var(--gold);
+    }
 
     textarea {
-      min-height: 242px;
+      min-height: 220px;
       resize: vertical;
       line-height: 1.5;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+      font-style: italic;
     }
 
     input::placeholder,
     textarea::placeholder {
       color: rgba(213, 173, 50, .38);
+      font-style: italic;
     }
 
     input:focus,
+    select:focus,
     textarea:focus {
       border-color: #f2d15d;
       box-shadow: 0 0 0 2px rgba(213, 173, 50, .16);
@@ -210,7 +207,7 @@
       border-radius: 0;
       background: var(--ink);
       color: var(--gold);
-      font: 500 1.05rem Arial, Helvetica, sans-serif;
+      font: 500 1rem "Copperplate Gothic Light", "Copperplate Gothic", Copperplate, Arial, sans-serif;
       letter-spacing: .22em;
       text-transform: uppercase;
       cursor: pointer;
@@ -246,7 +243,7 @@
       .intro, .invitation { line-height: 1.4; }
       .event-name { margin: 32px 0 24px; }
       .form-wrap { margin-top: 54px; }
-      textarea { min-height: 210px; }
+      textarea { min-height: 190px; }
       button { letter-spacing: .13em; font-size: .9rem; }
     }
   </style>
@@ -261,7 +258,25 @@
     </header>
 
     <div class="sword-divider" aria-hidden="true">
-      <span class="sword"></span>
+      <svg class="sword-graphic" viewBox="0 0 32 96" width="32" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="10" r="4" fill="url(#goldGrad)" />
+        <rect x="14" y="14" width="4" height="24" fill="url(#goldGrad)" rx="1" />
+        <rect x="4" y="38" width="24" height="6" rx="2" fill="url(#goldGrad)" />
+        <path d="M14 44H18V84L16 92L14 84V44Z" fill="url(#bladeGrad)" />
+        <path d="M16 44V90" stroke="#fff" stroke-width="1" opacity="0.6" />
+        <defs>
+          <linearGradient id="goldGrad" x1="0" y1="0" x2="32" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#a77b16"/>
+            <stop offset="0.5" stop-color="#f0ce52"/>
+            <stop offset="1" stop-color="#9b7015"/>
+          </linearGradient>
+          <linearGradient id="bladeGrad" x1="14" y1="44" x2="18" y2="92" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#c79f2e"/>
+            <stop offset="0.5" stop-color="#ffea9f"/>
+            <stop offset="1" stop-color="#a77b16"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </div>
 
     <section aria-label="Event invitation">
@@ -281,7 +296,6 @@
       <form action="https://formsubmit.co/YOUR_EMAIL_ADDRESS" method="POST">
         <input type="hidden" name="_subject" value="The Traitors 2026 — Cardiff Circle Up application">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_replyto" value="">
 
         <div class="form-trap" aria-hidden="true">
           <label for="website">Leave this field empty</label>
@@ -289,22 +303,31 @@
         </div>
 
         <div class="field">
-          <label for="email">Your email</label>
+          <label for="name">Your name</label>
           <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="your@email.com"
-            autocomplete="email"
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Enter your name"
+            autocomplete="name"
             required
           >
         </div>
 
         <div class="field">
           <label for="allegiance">Your allegiance</label>
+          <select id="allegiance" name="allegiance" required>
+            <option value="" disabled selected>Select your allegiance...</option>
+            <option value="Faithful">Faithful</option>
+            <option value="Traitor">Traitor</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="statement">Why are you worthy?</label>
           <textarea
-            id="allegiance"
-            name="allegiance"
+            id="statement"
+            name="statement"
             placeholder="State your case..."
             required
           ></textarea>
@@ -316,14 +339,5 @@
 
     <div class="ornament bottom-ornament" aria-hidden="true">✦ ✦ ✦</div>
   </main>
-
-  <script>
-    // Keep the reply-to address tied to the applicant's email.
-    const emailField = document.getElementById("email");
-    const replyToField = document.querySelector('input[name="_replyto"]');
-    emailField.addEventListener("input", () => {
-      replyToField.value = emailField.value;
-    });
-  </script>
 </body>
 </html>
