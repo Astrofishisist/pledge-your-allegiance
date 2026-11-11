@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#170b00">
+  <title>The Traitors 2026 — Cardiff Circle Up</title>
+  <style>
+    :root {
+      --bg: #170b00;
+      --gold: #d5ad32;
+      --gold-soft: #c79f2e;
+      --gold-dim: rgba(213, 173, 50, .28);
+      --ink: #080500;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--gold);
+      background: var(--bg);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .page {
+      width: min(100% - 48px, 1120px);
+      margin: 0 auto;
+      padding: 14px 0 30px;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+      width: 100%;
+      color: var(--gold);
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: 7px;
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .ornament::after {
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    header {
+      text-align: center;
+      padding-top: 66px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3.1rem, 8vw, 5.25rem);
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: .015em;
+      color: #d9b33b;
+    }
+
+    .subtitle {
+      margin: 12px 0 0;
+      font: 500 clamp(1rem, 2.8vw, 1.75rem)/1.3 Arial, sans-serif;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+
+    .sword-divider {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 58px 0 65px;
+      height: 96px;
+    }
+
+    .sword-divider::before,
+    .sword-divider::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .sword-divider::after {
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .sword {
+      position: relative;
+      width: 34px;
+      height: 100%;
+      margin: 0 28px;
+    }
+
+    .sword::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 15px;
+      width: 5px;
+      height: 72px;
+      background: linear-gradient(90deg, #a77b16, #f0ce52 50%, #9b7015);
+      clip-path: polygon(0 0, 100% 0, 75% 82%, 50% 100%, 25% 82%);
+    }
+
+    .sword::after {
+      content: "";
+      position: absolute;
+      top: 28px;
+      left: 0;
+      width: 34px;
+      height: 7px;
+      border-radius: 2px;
+      background: var(--gold);
+      box-shadow: 0 -20px 0 -1px var(--gold);
+    }
+
+    .intro {
+      text-align: center;
+      font-style: italic;
+      font-size: clamp(1.25rem, 3vw, 2rem);
+      line-height: 1.55;
+      margin: 0 auto;
+    }
+
+    .event-name {
+      margin: 44px 0 34px;
+      text-align: center;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: bold;
+    }
+
+    .invitation {
+      max-width: 1080px;
+      margin: 0 auto;
+      text-align: center;
+      font-style: italic;
+      font-size: clamp(1.25rem, 3vw, 2rem);
+      line-height: 1.45;
+    }
+
+    .form-wrap {
+      max-width: 840px;
+      margin: 76px auto 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .field { margin-bottom: 28px; }
+
+    label {
+      display: block;
+      margin: 0 0 12px;
+      font-size: 1.05rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #d4ad3e;
+    }
+
+    input[type="email"],
+    textarea {
+      display: block;
+      width: 100%;
+      border: 1px solid var(--gold);
+      border-radius: 0;
+      background: var(--ink);
+      color: #f1d36d;
+      padding: 19px 20px;
+      font: 1.1rem Arial, Helvetica, sans-serif;
+      outline: none;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+
+    input[type="email"] { min-height: 62px; }
+
+    textarea {
+      min-height: 242px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(213, 173, 50, .38);
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #f2d15d;
+      box-shadow: 0 0 0 2px rgba(213, 173, 50, .16);
+    }
+
+    button {
+      width: 100%;
+      min-height: 67px;
+      margin-top: 7px;
+      border: 1px solid var(--gold);
+      border-radius: 0;
+      background: var(--ink);
+      color: var(--gold);
+      font: 500 1.05rem Arial, Helvetica, sans-serif;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    button:hover,
+    button:focus-visible {
+      background: var(--gold);
+      color: var(--bg);
+    }
+
+    button:focus-visible {
+      outline: 2px solid #f5d66b;
+      outline-offset: 4px;
+    }
+
+    .bottom-ornament { margin: 68px 0 0; }
+
+    /* Hidden honeypot field for basic bot filtering */
+    .form-trap {
+      position: absolute;
+      left: -5000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 600px) {
+      .page { width: min(100% - 34px, 1120px); }
+      header { padding-top: 48px; }
+      .sword-divider { margin: 42px 0 45px; }
+      .intro, .invitation { line-height: 1.4; }
+      .event-name { margin: 32px 0 24px; }
+      .form-wrap { margin-top: 54px; }
+      textarea { min-height: 210px; }
+      button { letter-spacing: .13em; font-size: .9rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="ornament" aria-hidden="true">✦ ✦ ✦</div>
+
+    <header>
+      <h1>The Traitors 2026</h1>
+      <p class="subtitle">Cardiff Circle Up</p>
+    </header>
+
+    <div class="sword-divider" aria-hidden="true">
+      <span class="sword"></span>
+    </div>
+
+    <section aria-label="Event invitation">
+      <p class="intro">
+        I am your host Claudia "Georgie" Winkleman and my co-host and I welcome you to
+      </p>
+
+      <p class="event-name">The Traitors 2026 - Cardiff Circle Up.</p>
+
+      <p class="invitation">
+        Do you have what it takes to be a Traitor and murder your new friends? Or will you bring forth vengeance upon the Traitors as a Faithful? Tell us your preferred allegiance and why you are worthy, and my co-host and I may consider your request.
+      </p>
+    </section>
+
+    <section class="form-wrap" aria-label="Submit your allegiance">
+      <!-- Replace YOUR_EMAIL_ADDRESS with the inbox that should receive applications. -->
+      <form action="https://formsubmit.co/YOUR_EMAIL_ADDRESS" method="POST">
+        <input type="hidden" name="_subject" value="The Traitors 2026 — Cardiff Circle Up application">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_replyto" value="">
+
+        <div class="form-trap" aria-hidden="true">
+          <label for="website">Leave this field empty</label>
+          <input id="website" type="text" name="_honey" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label for="email">Your email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="your@email.com"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="allegiance">Your allegiance</label>
+          <textarea
+            id="allegiance"
+            name="allegiance"
+            placeholder="State your case..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit your preferred allegiance</button>
+      </form>
+    </section>
+
+    <div class="ornament bottom-ornament" aria-hidden="true">✦ ✦ ✦</div>
+  </main>
+
+  <script>
+    // Keep the reply-to address tied to the applicant's email.
+    const emailField = document.getElementById("email");
+    const replyToField = document.querySelector('input[name="_replyto"]');
+    emailField.addEventListener("input", () => {
+      replyToField.value = emailField.value;
+    });
+  </script>
+</body>
+</html>
