@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#170b00">
+  <title>The Traitors 2026 — Allegiance Recorded</title>
+  <style>
+    :root {
+      --bg: #170b00;
+      --gold: #d5ad32;
+      --gold-soft: #c79f2e;
+      --gold-dim: rgba(213, 173, 50, .28);
+      --ink: #080500;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--gold);
+      background: var(--bg);
+      font-family: "Copperplate Gothic Light", "Copperplate Gothic", Copperplate, serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page {
+      width: min(100% - 48px, 840px);
+      margin: 0 auto;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+      width: 100%;
+      color: var(--gold);
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: 7px;
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .ornament::after {
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .header-logo {
+      display: block;
+      margin: 40px auto 20px;
+      width: 80px;
+      height: 80px;
+      filter: invert(72%) sepia(58%) saturate(485%) hue-rotate(6deg) brightness(93%) contrast(88%) drop-shadow(0 2px 8px rgba(213, 173, 50, 0.25));
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      line-height: 1.1;
+      font-weight: 700;
+      letter-spacing: .04em;
+      color: #d9b33b;
+    }
+
+    .subtitle {
+      margin: 0 0 40px;
+      font-size: clamp(0.9rem, 2vw, 1.3rem);
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+    }
+
+    .sword-divider {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px 0 48px;
+      height: 96px;
+    }
+
+    .sword-divider::before,
+    .sword-divider::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .sword-divider::after {
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .sword-graphic {
+      margin: 0 28px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    }
+
+    .message {
+      max-width: 680px;
+      margin: 0 auto 48px;
+      font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+      line-height: 1.7;
+      letter-spacing: 0.04em;
+    }
+
+    .warning {
+      color: #e6c15c;
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      margin-top: 24px;
+      letter-spacing: 0.08em;
+    }
+
+    .btn-return {
+      display: inline-block;
+      text-decoration: none;
+      padding: 18px 36px;
+      border: 1px solid var(--gold);
+      background: var(--ink);
+      color: var(--gold);
+      font: 500 0.95rem "Copperplate Gothic Light", "Copperplate Gothic", Copperplate, sans-serif;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .btn-return:hover {
+      background: var(--gold);
+      color: var(--bg);
+    }
+
+    @media (max-width: 600px) {
+      .page { width: min(100% - 34px, 840px); }
+      .header-logo { width: 60px; height: 60px; }
+      .sword-divider { margin: 32px 0 36px; }
+      .btn-return { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="ornament" aria-hidden="true">✦ ✦ ✦</div>
+
+    <header>
+      <img src="M2mSM01.svg" alt="Logo" class="header-logo">
+      <h1>Your Fate Is Sealed</h1>
+      <p class="subtitle">Cardiff Circle Up</p>
+    </header>
+
+    <div class="sword-divider" aria-hidden="true">
+      <svg class="sword-graphic" viewBox="0 0 32 96" width="32" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="10" r="4" fill="url(#goldGrad)" />
+        <rect x="14" y="14" width="4" height="24" fill="url(#goldGrad)" rx="1" />
+        <rect x="4" y="38" width="24" height="6" rx="2" fill="url(#goldGrad)" />
+        <path d="M14 44H18V84L16 92L14 84V44Z" fill="url(#bladeGrad)" />
+        <path d="M16 44V90" stroke="#fff" stroke-width="1" opacity="0.6" />
+        <defs>
+          <linearGradient id="goldGrad" x1="0" y1="0" x2="32" y2="0" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#a77b16"/>
+            <stop offset="0.5" stop-color="#f0ce52"/>
+            <stop offset="1" stop-color="#9b7015"/>
+          </linearGradient>
+          <linearGradient id="bladeGrad" x1="14" y1="44" x2="18" y2="92" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#c79f2e"/>
+            <stop offset="0.5" stop-color="#ffea9f"/>
+            <stop offset="1" stop-color="#a77b16"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <section class="message" aria-label="Submission confirmation">
+      <p>
+        Your declaration has reached the hosts. We have noted your chosen path, your words, and your ambitions.
+      </p>
+      <p>
+        Whether you are chosen to walk in the shadows or defend the round table, remember this:
+      </p>
+      <p class="warning">
+        Trust no one. The Turret is watching.
+      </p>
+    </section>
+    <div class="ornament" style="margin-top: 56px;" aria-hidden="true">✦ ✦ ✦</div>
+  </main>
+</body>
+</html>
